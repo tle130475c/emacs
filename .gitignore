@@ -1,0 +1,9 @@
+## ignore everything
+*
+
+## not ignore files
+!.gitignore
+!init.el
+!custom.el
+!/prog-conf
+!/prog-conf/*.el
