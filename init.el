@@ -167,4 +167,22 @@
 (setopt whitespace-style '(face tabs trailing tab-mark missing-newline-at-eof))
 (add-hook 'prog-mode-hook #'whitespace-mode)
 
+;; ===========================================================================
+;; Per-machine: HiDPI font bump on WSL2 (everything-tiny fix)
+;; ===========================================================================
+;; WSLg + emacs-wayland (PGTK) doesn't pick up Windows display scaling, so
+;; on a HiDPI monitor everything renders at native pixel size and looks tiny.
+;; Detect WSL by checking any WSL-set env var (different distros / WSL versions
+;; populate different ones).
+;;
+;; Adjust :height if monitor / Windows scaling changes:
+;;   140 ≈ Arch GNOME at 133%
+;;   120 = smaller / older monitor
+;;   160+ = 4K at high Windows scaling
+(when (and (eq system-type 'gnu/linux)
+           (or (getenv "WSL_DISTRO_NAME")
+               (getenv "WSL_INTEROP")
+               (getenv "WSLENV")))
+  (set-face-attribute 'default nil :height 140))
+
 ;;; init.el ends here
