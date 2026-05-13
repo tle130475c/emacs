@@ -190,6 +190,6 @@
            (or (getenv "WSL_DISTRO_NAME")
                (getenv "WSL_INTEROP")
                (getenv "WSLENV")))
-  (set-face-attribute 'default nil :height 140))
+  (set-face-attribute 'default nil :height 180))
 
 ;;; init.el ends here
