@@ -6,8 +6,10 @@
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes '(adwaita))
  '(delete-selection-mode t)
+ '(indent-tabs-mode nil)
  '(menu-bar-mode nil)
  '(scroll-bar-mode nil)
+ '(tab-width 4)
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
