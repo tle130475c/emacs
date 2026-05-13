@@ -164,7 +164,14 @@
 ;; ===========================================================================
 ;; Whitespace visualization in programming modes
 ;; ===========================================================================
-(setopt whitespace-style '(face tabs trailing tab-mark missing-newline-at-eof))
+(setopt whitespace-style '(face spaces tabs trailing newline
+                           space-mark tab-mark newline-mark
+                           missing-newline-at-eof)
+        whitespace-space-regexp "^\\( +\\)"
+        whitespace-display-mappings
+        '((space-mark   ?\s  [?·])
+          (newline-mark ?\n  [?¶ ?\n])
+          (tab-mark     ?\t  [?» ?\t])))
 (add-hook 'prog-mode-hook #'whitespace-mode)
 
 ;; ===========================================================================
