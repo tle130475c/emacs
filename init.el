@@ -172,7 +172,7 @@
         '((space-mark   ?\s  [?·])
           (newline-mark ?\n  [?¶ ?\n])
           (tab-mark     ?\t  [?» ?\t])))
-(add-hook 'prog-mode-hook #'whitespace-mode)
+;; (add-hook 'prog-mode-hook #'whitespace-mode)
 
 ;; ===========================================================================
 ;; Per-machine: HiDPI font bump on WSL2 (everything-tiny fix)

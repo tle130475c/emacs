@@ -6,8 +6,13 @@
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes '(misterioso))
  '(delete-selection-mode t)
+ '(global-auto-revert-mode t)
+ '(global-display-fill-column-indicator-mode t)
+ '(global-whitespace-mode t)
  '(indent-tabs-mode nil)
+ '(inhibit-startup-screen t)
  '(menu-bar-mode nil)
+ '(ring-bell-function 'ignore)
  '(scroll-bar-mode nil)
  '(tab-width 4)
  '(tool-bar-mode nil))
